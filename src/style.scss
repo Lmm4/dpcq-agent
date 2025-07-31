@@ -1,0 +1,177 @@
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 8px;
+      /*高宽分别对应横竖滚动条的尺寸*/
+      height: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 10px;
+      // -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: #ccc;
+    }
+  
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      // -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background: #ffffff;
+    }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --el-color-primary: #7366ff !important;
+  --el-color-primary-light-3:rgba(115, 102, 255, 0.7) !important;
+  --el-color-primary-dark-2:rgba(115, 102, 255, 0.8) !important;
+}
+
+.el-dropdown-link:focus {
+  outline: none;
+}
+
+/* 手型 */
+.cursor{
+  cursor: pointer;
+}
+
+.w100{
+  width: 100% !important;
+}
+
+
+/* 弹性布局 上下居中 左右居中 */
+.dfcc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 弹性布局 上下居中 */
+.dfc{
+  display: flex;
+  align-items: center;
+}
+
+/* 弹性布局 左右对齐 上下居中 */
+.dfcsb{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 弹性布局 居右 上下对齐 */
+.dfcfe{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+/* 字体加粗 */
+.fw5{
+  font-weight: 500;
+}
+
+
+/* 字体颜色 */
+.c2f2{
+  color: #2f2f3b;
+}
+.c898{
+  color: #898989;
+}
+.c000{
+  color: #000;
+}
+.c2f207{
+  color: #2f2f3bb3;
+}
+.c00b{
+  color: #00b2ff;
+}
+.c538{
+  color: #538cf3;
+}
+.c424{
+  color: #424656;
+}
+
+
+/* 字体大小 */
+.f24{
+  font-size: 24px;
+}
+.f20{
+  font-size: 20px;
+}
+.f18{
+  font-size: 18px;
+}
+.f16{
+  font-size: 16px;
+}
+.f14{
+  font-size: 14px;
+}
+.f12{
+  font-size: 12px;
+}
+
+
+/* 下外边距 */
+.mb30{
+  margin-bottom: 30px;
+}
+.mb25{
+  margin-bottom: 25px;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+.mb15{
+  margin-bottom: 15px;
+}
+.mb10{
+  margin-bottom: 10px;
+}
+.mb5{
+  margin-bottom: 5px;
+}
+
+/* 左外边距 */
+.ml10{
+  margin-left: 10px;
+}
+.ml20{
+  margin-left: 20px;
+}
+
+/* 上外边距 */
+.mt10{
+  margin-top: 10px;
+}
+.mt20{
+  margin-top: 20px;
+}
+.mt30{
+  margin-top: 30px;
+}
+
+/* 右外边距 */
+.mr10{
+  margin-right: 10px;
+}
+.mr20{
+  margin-right: 20px;
+}
