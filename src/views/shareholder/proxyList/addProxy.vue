@@ -5,13 +5,13 @@
                 <el-input v-model="formData.agentUrl" placeholder="请输入代理域名" />
             </el-form-item> -->
             <el-form-item label="代理昵称" prop="realName">
-                <el-input v-model="formData.realName" placeholder="请输入代理昵称" />
+                <el-input v-model="formData.realName" maxlength="16" placeholder="请输入代理昵称" />
             </el-form-item>
             <el-form-item label="代理账号" prop="username">
                 <el-input v-model="formData.username" placeholder="请输入代理账号" />
             </el-form-item>
             <el-form-item label="代理密码" prop="password">
-                <el-input v-model="formData.password" placeholder="请输入代理密码" />
+                <el-input v-model="formData.password" maxlength="32" placeholder="请输入代理密码" />
             </el-form-item>
             <el-form-item label="代理分润比例" prop="agentProfitPercent">
                 <el-input-number class="w100" v-model="formData.agentProfitPercent" placeholder="请输入旗下代理分润比例"
@@ -74,6 +74,8 @@ const rules = reactive({
     ],
     password: [
         { required: true, message: '请输入代理密码', trigger: 'blur' },
+        { min: 6, max: 32, message: '密码长度必须在6-20位之间', trigger: 'blur' }
+
     ],
     agentProfitPercent: [
         { required: true, message: '请输入旗下代理分润比例', trigger: 'blur' },
