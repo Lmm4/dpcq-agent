@@ -44,7 +44,8 @@
                     </template>
                 </el-table-column>
             </el-table>
-            <div class="dfcfe mt20">
+            <div class="dfcsb mt20">
+                <div>数据更新有延迟，请稍后刷新网站</div>
                 <el-pagination v-model:current-page="state.monthBillFrom.page"
                     v-model:page-size="state.monthBillFrom.size" :page-sizes="[5, 10, 20, 25]"
                     layout="total, sizes, prev, pager, next, jumper" :total="state.monthTotal" />
