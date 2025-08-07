@@ -42,8 +42,11 @@ const data = {
     { value: "103", label: "轮盘" },
     { value: "104", label: "骰宝" },
     { value: "105", label: "牛牛" },
+    { value: "106", label: "三公" },
     { value: "107", label: "番摊" },
     { value: "108", label: "色碟" },
+    { value: "111", label: "炸金花" },
+    { value: "128", label: "安达巴哈" },
   ],
   dbPeopleGameType: [
     { value: "2001", label: "经典百家乐" },
