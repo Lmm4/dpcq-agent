@@ -14,9 +14,8 @@
                 <el-input v-model="formData.password" placeholder="请输入代理密码" />
             </el-form-item>
             <el-form-item label="代理分润比例" prop="agentProfitPercent">
-                <el-input-number class="w100" v-model="formData.agentProfitPercent"
-                    :placeholder="`请输入旗下代理分润比例,最大${maxProfit * 100 || 0}%`" :controls="false" :min="0"
-                    :max="maxProfit * 100">
+                <el-input-number class="w100" v-model="formData.agentProfitPercent" placeholder="请输入旗下代理分润比例"
+                    :controls="false" :min="0" :max="100">
                     <template #suffix>
                         <span>%</span>
                     </template>
@@ -75,7 +74,6 @@ const rules = reactive({
         { required: true, message: '请输入旗下代理分润比例', trigger: 'blur' },
     ],
 })
-const maxProfit = localGet('userInfo').profitRate;
 
 const emit = defineEmits(['update:show', 'refresh'])
 const show = computed({
