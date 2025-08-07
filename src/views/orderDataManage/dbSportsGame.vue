@@ -43,7 +43,7 @@
             <el-table-column label="本局压分" align="center" width="220" />
             <el-table-column label="本局得分" align="center" width="220" />
             <el-table-column label="结算金额" align="center" width="220" />
-            <el-table-column label="有效投注额" align="center" width="220" />
+            <el-table-column label="有效流水" align="center" width="220" />
             <el-table-column label="结算时间" align="center" width="220" />
             <el-table-column label="交易代码" align="center" width="220" />
             <el-table-column label="游戏回合编号" align="center" width="220" />

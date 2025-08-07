@@ -42,7 +42,7 @@
             <el-table-column prop="wmBetLog.bet" label="本局压分" align="center" width="140" />
             <el-table-column prop="wmBetLog.winLoss" label="本局得分" align="center" width="140" />
             <!-- <el-table-column prop="wmBetLog.winLoss" label="结算金额" align="center" width="140" /> -->
-            <el-table-column prop="wmBetLog.validBet" label="有效投注额" align="center" width="140" />
+            <el-table-column prop="wmBetLog.validBet" label="有效流水" align="center" width="140" />
             <el-table-column label="结算时间" align="center" width="180">
                 <template #default="{ row }">
                     <div>{{ dayjs(row.wmBetLog?.setTime).format('YYYY-MM-DD HH:mm:ss') }}</div>

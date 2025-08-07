@@ -51,7 +51,7 @@
             <el-table-column prop="rollin.bet" label="本局压分" align="center" width="120" />
             <el-table-column prop="rollin.win" label="本局得分" align="center" width="120" />
             <el-table-column prop="rollin.amount" label="结算金额" align="center" width="120" />
-            <el-table-column prop="rollin.validbet" label="有效投注额" align="center" width="120" />
+            <el-table-column prop="rollin.validbet" label="有效流水" align="center" width="120" />
             <el-table-column prop="rollin.datetime" label="结算时间" align="center" width="180">
                 <template #default="{ row }">
                     <div>{{ dayjs(row.rollin?.datetime).format('YYYY-MM-DD HH:mm:ss') }}</div>
