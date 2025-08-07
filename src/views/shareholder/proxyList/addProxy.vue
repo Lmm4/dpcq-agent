@@ -66,6 +66,11 @@ const rules = reactive({
     ],
     username: [
         { required: true, message: '请输入代理账号', trigger: 'blur' },
+        {
+            pattern: /^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]{4,12}$/,
+            message: '账号必须为4-12位字母和数字组合，不能纯字母或纯数字',
+            trigger: 'blur'
+        }
     ],
     password: [
         { required: true, message: '请输入代理密码', trigger: 'blur' },
