@@ -34,15 +34,16 @@
 <script setup>
 import { reactive, onMounted } from "vue";
 import Router from "@/router/index";
+import { localGet } from "@/utils/local.js";
 
 const state = reactive({
     title: "",
-    userInfo: ""
+    userInfo: {}
 });
 
 onMounted(() => {
-    state.userInfo = JSON.parse(localStorage.getItem("userInfo"));
-    switch (JSON.parse(localStorage.getItem("userInfo")).role) {
+    state.userInfo = localGet('userInfo') || {};
+    switch (localGet('userInfo').role) {
         case "big":
             state.title = '大股东管理后台';
             break;

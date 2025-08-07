@@ -1,5 +1,6 @@
 <template>
     <div class="equity_list">
+        <div class="mb20 f24 fw7">股东列表</div>
         <el-card>
             <template #header>
                 <div class="dfcsb">
@@ -30,7 +31,7 @@
                     </template>
                 </el-table-column> -->
                 <el-table-column prop="shareholderUrl" label="股东后台链接" align="center" width="220" />
-                <el-table-column label="操作" align="center" fixed="right">
+                <el-table-column label="操作" align="center" width="220" fixed="right">
                     <template #default="{ row }">
                         <el-button type="primary" link @click="monthBill(row.adminId)">月度账单</el-button>
                         <el-button type="primary" link @click="configBtn(row.adminId)">配置</el-button>
@@ -44,6 +45,8 @@
                     :total="state.total" />
             </div>
         </el-card>
+        <div class=" mt20 f24 fw7">注单数据表</div>
+        <orderDataManage />
         <addEquity v-model:show="state.addShow" @refresh="getList" />
         <deployRatio v-model:show="state.ratioShow" :adminId="state.adminId" @refresh="getList" />
         <passwordReset v-model:show="state.resetShow" :adminId="state.adminId" @refresh="getList" />
@@ -55,6 +58,7 @@ import { reactive, watch } from "vue";
 import addEquity from "./addEquity.vue";
 import deployRatio from "./deployRatio.vue";
 import passwordReset from "./passwordReset.vue";
+import orderDataManage from '@/views/orderDataManage/index.vue';
 import Router from "@/router/index";
 import { getShareholderList } from "@/api/page/major.js";
 

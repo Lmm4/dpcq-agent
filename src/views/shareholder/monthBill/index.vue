@@ -69,8 +69,8 @@
                 <el-table-column prop="gameName" label="游戏项目" align="center" />
                 <!-- <el-table-column prop="orderCount" label="注单数" align="center" /> -->
                 <el-table-column prop="betAmount" label="投注额" align="center" />
-                <el-table-column prop="validBetAmount" label="有效投注额" align="center" />
                 <el-table-column prop="winLossAmount" label="输赢总额" align="center" />
+                <el-table-column prop="validBetAmount" label="有效投注额" align="center" />
             </el-table>
             <div class="dfcfe mt20">
                 <el-pagination v-model:current-page="state.gameFrom.page" v-model:page-size="state.gameFrom.size"

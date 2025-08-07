@@ -1,9 +1,9 @@
 <template>
     <el-dialog v-model="show" title="添加代理" width="500" @close="addFormRef.resetFields()">
         <el-form ref="addFormRef" :model="formData" :rules="rules" label-width="auto" label-position="top">
-            <el-form-item label="代理域名配置" prop="agentUrl">
+            <!-- <el-form-item label="代理域名配置" prop="agentUrl">
                 <el-input v-model="formData.agentUrl" placeholder="请输入代理域名" />
-            </el-form-item>
+            </el-form-item> -->
             <el-form-item label="代理昵称" prop="realName">
                 <el-input v-model="formData.realName" placeholder="请输入代理昵称" />
             </el-form-item>

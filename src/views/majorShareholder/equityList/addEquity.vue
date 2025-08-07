@@ -1,9 +1,9 @@
 <template>
     <el-dialog v-model="show" title="添加股东" width="500" @close="addFormRef.resetFields()">
         <el-form ref="addFormRef" :model="formData" :rules="rules" label-width="auto" label-position="top">
-            <el-form-item label="股东域名配置" prop="shareholderBackendUrl">
+            <!-- <el-form-item label="股东域名配置" prop="shareholderBackendUrl">
                 <el-input v-model="formData.shareholderBackendUrl" placeholder="请输入股东域名" />
-            </el-form-item>
+            </el-form-item> -->
             <el-form-item label="股东昵称" prop="realName">
                 <el-input v-model="formData.realName" placeholder="请输入股东昵称" />
             </el-form-item>

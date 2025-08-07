@@ -1,5 +1,6 @@
 <template>
     <div class="proxy_list">
+        <div class="mb20 f24 fw7">代理列表</div>
         <el-card>
             <template #header>
                 <div class="dfcsb">
@@ -14,7 +15,7 @@
             </template>
             <el-table :data="state.tableData" border style="width: 100%">
                 <el-table-column prop="adminId" label="代理编号" align="center" width="180" />
-                <el-table-column prop="realName" label="代理昵称" align="center" width="180" />
+                <el-table-column prop="username" label="代理账号" align="center" width="180" />
                 <el-table-column prop="memberCount" label="旗下会员数量" align="center" width="180" />
                 <el-table-column prop="finalWinLoss" label="总输赢金额" align="center" width="180" />
                 <el-table-column prop="totalRebateAmount" label="总返水金额" align="center" width="180" />
@@ -29,7 +30,7 @@
                         <div>{{ dayjs(row.statAddAt).format('YYYY-MM-DD HH:mm:ss') }}</div>
                     </template>
                 </el-table-column>
-                <el-table-column label="操作" align="center" width="210" fixed="right">
+                <el-table-column label="操作" align="center" width="220" fixed="right">
                     <template #default="{ row }">
                         <el-button type="primary" link @click="monthBill(row.adminId)">月度账单</el-button>
                         <el-button type="primary" link @click="configBtn(row.adminId)">配置</el-button>
@@ -44,6 +45,8 @@
                     :total="state.total" />
             </div>
         </el-card>
+        <div class=" mt20 f24 fw7">注单数据表</div>
+        <orderDataManage />
         <addProxy v-model:show="state.addShow" @refresh="getList" />
         <deployRatio v-model:show="state.ratioShow" :adminId="state.adminId" @refresh="getList" />
         <passwordReset v-model:show="state.resetShow" :adminId="state.adminId" @refresh="getList" />
@@ -55,6 +58,7 @@ import { reactive, watch } from "vue";
 import addProxy from "./addProxy.vue";
 import deployRatio from "./deployRatio.vue";
 import passwordReset from "./passwordReset.vue";
+import orderDataManage from '@/views/orderDataManage/index.vue';
 import Router from "@/router/index";
 import { dayjs } from "element-plus";
 
@@ -74,7 +78,7 @@ const fromData = reactive({
     name: "",
     page: 1,
     size: 10
-})
+});
 
 // 配置
 const configBtn = (adminId) => {

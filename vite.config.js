@@ -23,7 +23,7 @@ export default defineConfig({
     /** 打包后静态资源目录 */
     assetsDir: "dist",
     // outDir: "club.dpcq.work",
-    outDir: "dpcq_equity",
+    outDir: "agent.dpcq.club",
   },
   server: {
     host: true,
@@ -33,7 +33,7 @@ export default defineConfig({
     proxy: {
       "/api": {
         target: "https://test-agent.dpcq.club",
-        // target: "http://test-agent.dpcq.club:9300",
+        // target: "https://agent.dpcq.club",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/api/, ""),
       },
