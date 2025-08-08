@@ -1,7 +1,7 @@
 <template>
     <el-dialog v-model="show" title="生成账单" width="80%">
         <el-table :data="state.tableData" border style="width: 100%">
-            <el-table-column prop="username" label="代理昵称" align="center" />
+            <el-table-column prop="username" label="代理账号" align="center" />
             <el-table-column prop="finalWinLoss" label="输赢总额" align="center" />
             <el-table-column prop="feeAmount" label="手续费" align="center" />
             <el-table-column prop="siteFeeAmount" label="场馆费" align="center" />
@@ -21,7 +21,7 @@
         <template #footer>
             <div class="dialog-footer">
                 <!-- <el-button @click="show = false">取消</el-button> -->
-                <el-button type="danger" @click="show = false">已确认收取佣金，并确认结算，请点击按钮</el-button>
+                <el-button type="primary" @click="show = false">确定</el-button>
             </div>
         </template>
     </el-dialog>
@@ -30,6 +30,7 @@
 <script setup>
 import { defineProps, defineEmits, computed, ref, reactive, watch } from "vue";
 import { generateBill } from "@/api/page/common.js";
+import { dayjs } from "element-plus";
 
 const props = defineProps({
     show: {
@@ -62,7 +63,10 @@ const show = computed({
 })
 
 const getInfo = async () => {
-    const res = await generateBill(props.billInfo);
+    let params = { ...props.billInfo };
+    params.startTime = dayjs(params.startTime).startOf('day').format('YYYY-MM-DD HH:mm:ss');
+    params.endTime = dayjs(params.endTime).endOf('day').format('YYYY-MM-DD HH:mm:ss');
+    const res = await generateBill(params);
     state.shareTitle = res.adminProfitRate * 100;
     state.agentTitle = res.agentProfitRate * 100;
     state.tableData.push(res);

@@ -16,17 +16,9 @@
                 <el-button type="primary" @click="getMonthBillList">搜索</el-button>
             </div>
             <el-table :data="state.monthBillData" border style="width: 100%">
-                <el-table-column label="日期开始" align="center" width="180">
-                    <template #default="{ row }">
-                        <div>{{ dayjs(row.startDate).format('YYYY-MM-DD') }}</div>
-                    </template>
-                </el-table-column>
-                <el-table-column label="日期结束" align="center" width="180">
-                    <template #default="{ row }">
-                        <div>{{ dayjs(row.endDate).format('YYYY-MM-DD') }}</div>
-                    </template>
-                </el-table-column>
-                <el-table-column prop="username" label="代理昵称" align="center" width="180" />
+                <el-table-column prop="startTime" label="日期开始" align="center" width="180" />
+                <el-table-column prop="endTime" label="日期结束" align="center" width="180" />
+                <el-table-column prop="username" label="代理账号" align="center" width="180" />
                 <!-- <el-table-column prop="newAgentCount" label="新增代理" align="center" width="180" /> -->
                 <el-table-column prop="newPlayerCount" label="新增会员" align="center" width="140" />
                 <el-table-column prop="totalPlayerCount" label="会员总数" align="center" width="140" />
