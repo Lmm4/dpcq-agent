@@ -25,7 +25,7 @@
                 <el-table-column prop="totalPlayerCount" label="会员总数" align="center" width="180" />
                 <el-table-column prop="orderCount" label="注单数" align="center" width="180" />
                 <!-- <el-table-column prop="betAmount" label="流水" align="center" width="180" /> -->
-                <el-table-column prop="finalWinLoss" label="账变信息" align="center" width="220" />
+                <el-table-column prop="finalWinLoss" label="输赢额" align="center" width="220" />
                 <!-- <el-table-column prop="validBetAmount" label="有效流水" align="center" width="180" /> -->
                 <el-table-column prop="promotion" label="活动优惠" align="center" width="220" />
                 <el-table-column prop="agentRebate" label="代理返水" align="center" width="220" />
