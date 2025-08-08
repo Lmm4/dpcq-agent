@@ -6,10 +6,10 @@
             <el-table-column prop="feeAmount" label="手续费" align="center" />
             <el-table-column prop="siteFeeAmount" label="场馆费" align="center" />
             <el-table-column prop="totalAmount" label="总计" align="center" />
-            <el-table-column prop="agentProfit" align="center">
-                <template #header>
+            <el-table-column label="代理分润" prop="agentProfit" align="center">
+                <!-- <template #header>
                     <div>代理分润{{ state.agentTitle }}%</div>
-                </template>
+                </template> -->
             </el-table-column>
             <!-- <el-table-column prop="adminProfit" align="center">
                 <template #header>
@@ -67,8 +67,8 @@ const getInfo = async () => {
     params.startTime = dayjs(params.startTime).startOf('day').format('YYYY-MM-DD HH:mm:ss');
     params.endTime = dayjs(params.endTime).endOf('day').format('YYYY-MM-DD HH:mm:ss');
     const res = await generateBill(params);
-    state.shareTitle = res.adminProfitRate * 100;
-    state.agentTitle = res.agentProfitRate * 100;
+    // state.shareTitle = res.adminProfitRate * 100;
+    // state.agentTitle = res.agentProfitRate * 100;
     state.tableData.push(res);
 
 }

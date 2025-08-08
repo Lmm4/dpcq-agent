@@ -6,15 +6,15 @@
             <el-table-column prop="feeAmount" label="手续费" align="center" />
             <el-table-column prop="siteFeeAmount" label="场馆费" align="center" />
             <el-table-column prop="totalAmount" label="总计" align="center" />
-            <el-table-column prop="adminProfit" align="center">
-                <template #header>
+            <el-table-column label="股东分润" prop="adminProfit" align="center">
+                <!-- <template #header>
                     <div>股东分润{{ state.shareTitle }}%</div>
-                </template>
+                </template> -->
             </el-table-column>
-            <el-table-column prop="agentProfit" align="center">
-                <template #header>
+            <el-table-column label="代理分润" prop="agentProfit" align="center">
+                <!-- <template #header>
                     <div>代理分润{{ state.agentTitle }}%</div>
-                </template>
+                </template> -->
             </el-table-column>
             <el-table-column prop="settleAmount" label="结算" align="center" />
         </el-table>
