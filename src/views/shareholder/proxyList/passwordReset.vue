@@ -1,5 +1,5 @@
 <template>
-    <el-dialog v-model="show" title="比例配置" width="500" @close="formDataRef.resetFields()">
+    <el-dialog v-model="show" title="密码重置" width="500" @close="formDataRef.resetFields()">
         <el-form ref="formDataRef" :model="formData" :rules="rules" label-width="auto" label-position="top">
             <el-form-item label="股东ID">
                 <el-input v-model="formData.adminId" disabled placeholder="请输入股东ID" />
