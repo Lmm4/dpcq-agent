@@ -23,9 +23,9 @@
                 <el-table-column prop="newPlayerCount" label="新增会员" align="center" width="140" />
                 <el-table-column prop="totalPlayerCount" label="会员总数" align="center" width="140" />
                 <el-table-column prop="orderCount" label="注单数" align="center" width="140" />
-                <el-table-column prop="betAmount" label="流水" align="center" width="140" />
-                <el-table-column prop="finalWinLoss" label="输赢总额" align="center" width="160" />
-                <el-table-column prop="validBetAmount" label="有效流水" align="center" width="160" />
+                <!-- <el-table-column prop="betAmount" label="流水" align="center" width="140" /> -->
+                <el-table-column prop="finalWinLoss" label="账变信息" align="center" width="160" />
+                <!-- <el-table-column prop="validBetAmount" label="有效流水" align="center" width="160" /> -->
                 <el-table-column prop="promotion" label="活动优惠" align="center" width="160" />
                 <el-table-column prop="agentRebate" label="代理返水" align="center" width="160" />
                 <!-- <el-table-column prop="agentLink" label="玩家返水" align="center" width="160" /> -->
@@ -45,7 +45,7 @@
         </el-card>
         <el-card class="mt30">
             <div class="dfc mb20">
-                <div class="f16 c424 fw5 mr20">用户游戏数据</div>
+                <div class="f16 c424 fw5 mr20">用户账变数据</div>
                 <div class="mr20">
                     <el-input v-model="state.gameFrom.username" style="width: 240px" placeholder="请输入会员昵称" />
                 </div>
@@ -62,7 +62,7 @@
                 <el-table-column prop="gameName" label="游戏项目" align="center" />
                 <!-- <el-table-column prop="orderCount" label="注单数" align="center" /> -->
                 <!-- <el-table-column prop="betAmount" label="流水" align="center" /> -->
-                <el-table-column prop="winLossAmount" label="输赢总额" align="center" />
+                <el-table-column prop="winLossAmount" label="账变信息" align="center" />
                 <!-- <el-table-column prop="validBetAmount" label="有效流水" align="center" /> -->
             </el-table>
             <div class="dfcfe mt20">

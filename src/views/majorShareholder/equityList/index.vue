@@ -18,7 +18,7 @@
                 <el-table-column prop="username" label="股东账号" align="center" width="180" />
                 <el-table-column prop="agentCount" label="股东下级代理数量" align="center" width="180" />
                 <el-table-column prop="memberCount" label="旗下所有会员数量" align="center" width="180" />
-                <el-table-column prop="finalWinLoss" label="总输赢金额" align="center" width="180" />
+                <el-table-column prop="finalWinLoss" label="账变信息" align="center" width="180" />
                 <el-table-column prop="totalRebateAmount" label="总返水金额" align="center" width="180" />
                 <el-table-column prop="shareholderProfitPercent" label="股东分润比例" align="center" width="170">
                     <template #default="{ row }">

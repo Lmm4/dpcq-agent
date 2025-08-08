@@ -30,10 +30,10 @@
                 <el-table-column prop="account" label="用户账号" align="center" width="auto" />
                 <!-- <el-table-column prop="country" label="国家设置" align="center" width="auto" /> -->
                 <el-table-column prop="name" label="昵称" align="center" width="auto" />
-                <el-table-column prop="rebate" label="可提现反水" align="center" width="auto" />
-                <el-table-column prop="rebateFrozen" label="冻结反水" align="center" width="auto" />
+                <!-- <el-table-column prop="rebate" label="可提现反水" align="center" width="auto" />
+                <el-table-column prop="rebateFrozen" label="冻结反水" align="center" width="auto" /> -->
                 <!-- <el-table-column prop="todayValidBet" label="今日有效流水" align="center" width="auto" /> -->
-                <el-table-column prop="winLoss" label="输赢总额" align="center" width="auto" />
+                <el-table-column prop="winLoss" label="账变信息" align="center" width="auto" />
                 <!-- <el-table-column prop="validBet" label="总有效流水" align="center" width="auto" /> -->
                 <!-- <el-table-column prop="point" label="积分" align="center" width="auto" /> -->
                 <el-table-column prop="wallet" label="个人钱包余额" align="center" width="auto" />
