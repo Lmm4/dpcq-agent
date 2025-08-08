@@ -18,7 +18,7 @@
                 <el-table-column prop="username" label="代理账号" align="center" width="180" />
                 <el-table-column prop="memberCount" label="旗下会员数量" align="center" width="180" />
                 <el-table-column prop="finalWinLoss" label="总输赢金额" align="center" width="180" />
-                <el-table-column prop="totalRebateAmount" label="总返水金额" align="center" width="180" />
+                <!-- <el-table-column prop="totalRebateAmount" label="总返水金额" align="center" width="180" /> -->
                 <el-table-column prop="agentProfitPercent" label="代理分润比例" align="center" width="180">
                     <template #default="{ row }">
                         <div>{{ row.agentProfitPercent * 100 }}%</div>
@@ -30,7 +30,7 @@
                         <div>{{ dayjs(row.statAddAt).format('YYYY-MM-DD HH:mm:ss') }}</div>
                     </template>
                 </el-table-column>
-                <el-table-column label="操作" align="center" width="220" fixed="right">
+                <el-table-column label="操作" align="center" width="auto" fixed="right">
                     <template #default="{ row }">
                         <el-button type="primary" link @click="monthBill(row.adminId)">月度账单</el-button>
                         <el-button type="primary" link @click="configBtn(row.adminId)">配置</el-button>

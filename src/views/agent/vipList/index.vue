@@ -32,18 +32,18 @@
                 <el-table-column prop="name" label="昵称" align="center" width="auto" />
                 <el-table-column prop="rebate" label="可提现反水" align="center" width="auto" />
                 <el-table-column prop="rebateFrozen" label="冻结反水" align="center" width="auto" />
-                <el-table-column prop="todayValidBet" label="今日有效流水" align="center" width="auto" />
+                <!-- <el-table-column prop="todayValidBet" label="今日有效流水" align="center" width="auto" /> -->
                 <el-table-column prop="winLoss" label="输赢总额" align="center" width="auto" />
-                <el-table-column prop="validBet" label="总有效流水" align="center" width="auto" />
+                <!-- <el-table-column prop="validBet" label="总有效流水" align="center" width="auto" /> -->
                 <!-- <el-table-column prop="point" label="积分" align="center" width="auto" /> -->
                 <el-table-column prop="wallet" label="个人钱包余额" align="center" width="auto" />
                 <el-table-column prop="deposit" label="累计总充值" align="center" width="auto" />
                 <el-table-column prop="withdraw" label="累计总提现" align="center" width="auto" />
-                <el-table-column label="操作" align="center" width="auto" fixed="right">
+                <!-- <el-table-column label="操作" align="center" width="auto" fixed="right">
                     <template #default="{ row }">
                         <el-button type="primary" link @click="viewRecord(row.userId)">查看记录</el-button>
                     </template>
-                </el-table-column>
+                </el-table-column> -->
             </el-table>
             <div class="dfcfe mt20">
                 <el-pagination v-model:current-page="fromData.page" v-model:page-size="fromData.size"
@@ -64,7 +64,7 @@ import { ElMessage } from "element-plus";
 import orderDataManage from '@/views/orderDataManage/index.vue';
 import { getAgentList } from "@/api/page/agent.js";
 import { localGet } from "@/utils/local.js";
-
+const h5Url = import.meta.env.VITE_H5_URL;
 
 
 const state = reactive({
@@ -111,7 +111,7 @@ watch([() => fromData.page, () => fromData.size], () => {
 });
 
 onMounted(() => {
-    state.copyLink = `https://test-m.dpcq.club/?code=${localGet('userInfo').inviteCode}`;
+    state.copyLink = `${h5Url}?code=${localGet('userInfo').inviteCode}`;
 })
 
 getList();

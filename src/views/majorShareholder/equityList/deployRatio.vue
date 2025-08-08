@@ -2,9 +2,8 @@
     <el-dialog v-model="show" title="比例配置" width="500" @close="formDataRef.resetFields()">
         <el-form ref="formDataRef" :model="formData" :rules="rules" label-width="auto" label-position="top">
             <el-form-item label="股东分润比例" prop="subProfit">
-                <el-input-number class="w100" v-model="formData.subProfit"
-                    :placeholder="`请输入股东分润比例,最大${formData.parentProfit || 0}%`" :controls="false" :min="0"
-                    :max="formData.parentProfit">
+                <el-input-number class="w100" v-model="formData.subProfit" placeholder="请输入股东分润比例" :controls="false"
+                    :min="0" :max="100">
                     <template #suffix>
                         <span>%</span>
                     </template>

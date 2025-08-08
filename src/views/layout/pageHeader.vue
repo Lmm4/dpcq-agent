@@ -6,10 +6,10 @@
             <div class="dfc">
                 <img class="avatar_icon" src="@/assets/avatar.gif" alt="" srcset="">
                 <div class="ml20">
-                    <div class="fw6 c000">{{ state.userInfo.nickname }}</div>
+                    <!-- <div class="fw6 c000">{{ state.userInfo.nickname }}</div> -->
                     <el-dropdown @command="logOut">
                         <div class="dfc cursor el-dropdown-link">
-                            <div class="f12 c2f207">{{ state.userInfo.roleDesc }}</div>
+                            <div class="f12 c2f207">{{ state.userInfo.nickname }}</div>
                             <el-icon class="el-icon--right">
                                 <arrow-down />
                             </el-icon>

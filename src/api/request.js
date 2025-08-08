@@ -48,6 +48,8 @@ request.interceptors.response.use(
       window.location.href = "/login";
     } else if (error.status == 418) {
       ElMessage.error("请求不通过！");
+    } else if (error.status == 400) {
+      ElMessage.error(error.response.data.error);
     } else {
       // ElMessage.error(error.response?.data.message);
     }

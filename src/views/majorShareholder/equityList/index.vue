@@ -31,7 +31,7 @@
                     </template>
                 </el-table-column> -->
                 <el-table-column prop="shareholderUrl" label="股东后台链接" align="center" width="220" />
-                <el-table-column label="操作" align="center" width="220" fixed="right">
+                <el-table-column label="操作" align="center" width="auto" fixed="right">
                     <template #default="{ row }">
                         <el-button type="primary" link @click="monthBill(row.adminId)">月度账单</el-button>
                         <el-button type="primary" link @click="configBtn(row.adminId)">配置</el-button>
