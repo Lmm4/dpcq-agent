@@ -2,7 +2,7 @@
     <el-dialog v-model="show" title="生成账单" width="80%">
         <el-table :data="state.tableData" border style="width: 100%">
             <el-table-column prop="username" label="股东账号" align="center" />
-            <el-table-column prop="finalWinLoss" label="账变信息" align="center" />
+            <el-table-column prop="finalWinLoss" label="输赢总额" align="center" />
             <el-table-column prop="feeAmount" label="手续费" align="center" />
             <el-table-column prop="siteFeeAmount" label="场馆费" align="center" />
             <el-table-column prop="totalAmount" label="总计" align="center" />

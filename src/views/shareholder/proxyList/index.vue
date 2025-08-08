@@ -17,7 +17,7 @@
                 <el-table-column prop="adminId" label="代理编号" align="center" width="180" />
                 <el-table-column prop="username" label="代理账号" align="center" width="180" />
                 <el-table-column prop="memberCount" label="旗下会员数量" align="center" width="180" />
-                <el-table-column prop="finalWinLoss" label="输赢额" align="center" width="180" />
+                <el-table-column prop="finalWinLoss" label="输赢总额" align="center" width="180" />
                 <!-- <el-table-column prop="totalRebateAmount" label="总返水金额" align="center" width="180" /> -->
                 <el-table-column prop="agentProfitPercent" label="代理分润比例" align="center" width="180">
                     <template #default="{ row }">
