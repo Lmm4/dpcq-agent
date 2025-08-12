@@ -24,50 +24,20 @@
             </el-form-item>
         </el-form>
         <el-table :data="state.tableData" border style="width: 100%">
-            <el-table-column type="expand">
-                <template #default="{ row }">
-                    <el-table :data="row.dbBetList" border>
-                        <el-table-column label="交易单号" prop="transferNo" align="center" />
-                        <el-table-column label="下注总金额正数" prop="betTotalAmount" align="center" />
-                        <el-table-column label="下注操作过后的余额" prop="betAfterAmount" align="center" />
-                        <el-table-column label="下注时间" align="center">
-                            <template #default="{ row }">
-                                <div>{{ dayjs(row.betTime).format('YYYY-MM-DD HH:mm:ss') }}</div>
-                            </template>
-                        </el-table-column>
-                    </el-table>
-                </template>
-            </el-table-column>
             <el-table-column prop="userInfo.userId" label="用户ID" align="center" width="140" />
             <el-table-column prop="userInfo.username" label="用户账号" align="center" width="140" />
-            <!-- <el-table-column align="center">
-                <template #header>
-                    <div>上级</div>
-                    <div>(大股东/股东/代理)</div>
-                </template>
-                <template #default="{ row }">
-                    <div>{{ row.userInfo.fullName.join('/') }}</div>
-                </template>
-            </el-table-column> -->
-            <el-table-column prop="dbGamePayout.transferNo" label="交易单号" align="center" />
-            <el-table-column label="游戏类型" align="center">
-                <template #default="{ row }">
-                    <div>{{ getDictLabel('dbPeopleGameType', row.dbGamePayout?.gameTypeId) }}</div>
-                </template>
-            </el-table-column>
-            <el-table-column label="派彩时间" align="center">
-                <template #default="{ row }">
-                    <div>{{ dayjs(row.dbGamePayout?.payoutTime).format('YYYY-MM-DD HH:mm:ss') }}</div>
-                </template>
-            </el-table-column>
-            <el-table-column prop="dbGamePayout.roundNo" label="局号" align="center" />
-            <el-table-column prop="dbGamePayout.payoutAmount" label="派彩金额" align="center" width="120" />
-            <el-table-column prop="dbGamePayout.payoutAfterAmount" label="派彩过后的金额" align="center" width="140" />
-            <el-table-column label="业务类型" align="center" width="140">
-                <template #default="{ row }">
-                    <div>{{ getDictLabel('businessType', row.dbGamePayout?.transferType) }}</div>
-                </template>
-            </el-table-column>
+            <el-table-column prop="dbBetHistoryRecord.id" label="注单ID" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.betAmount" label="下注金额" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.validBetAmount" label="有效下注金额" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.netAmount" label="净赢金额" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.beforeAmount" label="下注前余额" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.platformName" label="平台名称" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.odds" label="赔率" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.roundNo" label="局号" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.loginIp" label="登录IP" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.handingFee" label="手续费" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.actualHandingFee" label="实际手续费" align="center" width="140" />
+
         </el-table>
         <div class="dfcfe mt20">
             <el-pagination v-model:current-page="formData.page" v-model:page-size="formData.size"
@@ -156,4 +126,6 @@ onMounted(() => {
 })
 </script>
 
+<style lang="scss" scoped></style>
+<style lang="scss" scoped></style>
 <style lang="scss" scoped></style>

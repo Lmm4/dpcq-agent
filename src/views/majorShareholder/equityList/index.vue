@@ -20,18 +20,15 @@
                 <el-table-column prop="memberCount" label="旗下所有会员数量" align="center" width="180" />
                 <el-table-column prop="finalWinLoss" label="输赢额" align="center" width="180" />
                 <el-table-column prop="totalRebateAmount" label="总返水金额" align="center" width="180" />
+                <el-table-column prop="totalRebateAmount" label="有效流水" align="center" width="180" />
+                <el-table-column prop="totalRebateAmount" label="有效投注额" align="center" width="180" />
                 <el-table-column prop="shareholderProfitPercent" label="股东分润比例" align="center" width="170">
                     <template #default="{ row }">
                         <div>{{ row.shareholderProfitPercent * 100 }}%</div>
                     </template>
                 </el-table-column>
-                <!-- <el-table-column prop="agentProfitPercent" label="代理分润比例" align="center" width="170">
-                    <template #default="{ row }">
-                        <div>{{ row.agentProfitPercent * 100 }}%</div>
-                    </template>
-                </el-table-column> -->
-                <el-table-column prop="shareholderUrl" label="股东后台链接" align="center" width="220" />
-                <el-table-column label="操作" align="center" width="auto" fixed="right">
+                <el-table-column prop="shareholderUrl" label="股东后台链接" align="center" min-width="220" />
+                <el-table-column label="操作" align="center" width="210" fixed="right">
                     <template #default="{ row }">
                         <el-button type="primary" link @click="monthBill(row.adminId)">月度账单</el-button>
                         <el-button type="primary" link @click="configBtn(row.adminId)">配置</el-button>

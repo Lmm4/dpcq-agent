@@ -21,7 +21,7 @@ export function getWMOrderDataList(data) {
 // 获取DB真人注单数据列表
 export function getDBOrderDataList(params) {
   return request({
-    url: "/dp-wm/bd/dbzrBetOrderPage",
+    url: "/dp-wm/bd/history",
     method: "GET",
     params,
   });

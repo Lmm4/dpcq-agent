@@ -16,7 +16,7 @@
                     <div>代理分润{{ state.agentTitle }}%</div>
                 </template> -->
             </el-table-column>
-            <el-table-column prop="settleAmount" label="结算" align="center" />
+            <!-- <el-table-column prop="settleAmount" label="结算" align="center" /> -->
         </el-table>
         <template #footer>
             <div class="dialog-footer">
