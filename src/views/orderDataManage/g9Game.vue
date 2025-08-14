@@ -23,6 +23,7 @@
         <el-table :data="state.tableData" border style="width: 100%">
             <el-table-column prop="userId" label="用户ID" align="center" width="140" />
             <el-table-column prop="userName" label="用户账号" align="center" width="140" />
+            <el-table-column prop="no" label="订单号" align="center" width="220" />
             <el-table-column prop="gameName" label="游戏名称" align="center" width="180" />
             <el-table-column label="游玩时间" align="center" width="180">
                 <template #default="{ row }">
@@ -30,12 +31,12 @@
                 </template>
             </el-table-column>
             <el-table-column prop="gameTypeName" label="游戏类型" align="center" width="180" />
-            <el-table-column prop="bet" label="投注金额" align="center" width="180" />
-            <el-table-column prop="validbet" label="有效投注" align="center" width="180" />
-            <el-table-column prop="win" label="游戏赢" align="center" width="220" />
-            <el-table-column prop="netWin" label="总输赢" align="center" width="220" />
-            <el-table-column prop="preAmount" label="转帐前金额" align="center" width="220" />
-            <el-table-column prop="aftAmount" label="转帐后金额" align="center" width="220" />
+            <el-table-column prop="bet" label="投注金额" align="center" width="120" />
+            <el-table-column prop="validbet" label="有效投注" align="center" width="120" />
+            <el-table-column prop="win" label="游戏赢" align="center" width="120" />
+            <el-table-column prop="netWin" label="总输赢" align="center" width="120" />
+            <el-table-column prop="preAmount" label="转帐前金额" align="center" width="130" />
+            <el-table-column prop="aftAmount" label="转帐后金额" align="center" width="130" />
             <el-table-column label="结算时间" align="center" width="220">
                 <template #default="{ row }">
                     <div>{{ dayjs(row.awardTime).format('YYYY-MM-DD HH:mm:ss') }}</div>
