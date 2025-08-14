@@ -27,8 +27,8 @@
                 <el-table-column prop="finalWinLoss" label="输赢总额" align="center" width="160" />
                 <el-table-column prop="validBetAmount" label="有效投注" align="center" width="160" />
                 <el-table-column prop="promotion" label="活动优惠" align="center" width="160" />
-                <el-table-column prop="agentRebate" label="代理返水" align="center" width="160" />
-                <el-table-column prop="agentLink" label="玩家返水" align="center" width="160" />
+                <el-table-column prop="agentRebate" label="返水" align="center" width="160" />
+                <!-- <el-table-column prop="agentLink" label="玩家返水" align="center" width="160" /> -->
                 <el-table-column prop="feeAmount" label="手续费" align="center" width="160" />
                 <el-table-column label="操作" align="center" width="160" fixed="right">
                     <template #default="{ row }">
