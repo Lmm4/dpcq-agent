@@ -26,7 +26,7 @@
         <el-table :data="state.tableData" border style="width: 100%">
             <el-table-column prop="userInfo.userId" label="用户ID" align="center" width="140" />
             <el-table-column prop="userInfo.username" label="用户账号" align="center" width="140" />
-            <el-table-column prop="dbBetHistoryRecord.id" label="注单ID" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.id" label="注单ID" align="center" width="200" />
             <el-table-column prop="dbBetHistoryRecord.betAmount" label="下注金额" align="center" width="140" />
             <el-table-column prop="dbBetHistoryRecord.validBetAmount" label="有效下注金额" align="center" width="140" />
             <el-table-column prop="dbBetHistoryRecord.netAmount" label="净赢金额" align="center" width="140" />
@@ -37,6 +37,11 @@
             <el-table-column prop="dbBetHistoryRecord.loginIp" label="登录IP" align="center" width="140" />
             <el-table-column prop="dbBetHistoryRecord.handingFee" label="手续费" align="center" width="140" />
             <el-table-column prop="dbBetHistoryRecord.actualHandingFee" label="实际手续费" align="center" width="140" />
+            <el-table-column prop="dbBetHistoryRecord.createdAt" label="创建时间" align="center" width="220">
+                <template #default="{ row }">
+                    <div>{{ dayjs(row.dbBetHistoryRecord.createdAt).format('YYYY-MM-DD HH:mm:ss') }}</div>
+                </template>
+            </el-table-column>
 
         </el-table>
         <div class="dfcfe mt20">
