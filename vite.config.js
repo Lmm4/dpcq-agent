@@ -32,8 +32,8 @@ export default defineConfig({
     cors: true, // 允许跨域
     proxy: {
       "/api": {
-        target: "https://test-agent.dpcq.club",
-        // target: "https://agent.dpcq.club",
+        // target: "https://test-agent.dpcq.club",
+        target: "https://agent.dpcq.club",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/api/, ""),
       },
