@@ -133,8 +133,8 @@ watch([() => formData.page, () => formData.size], () => {
 // 处理时间选择
 watch(() => state.time, (val) => {
     if (val) {
-        formData.startTime = dayjs(val[0]).format('YYYY-MM-DD HH:mm:ss');
-        formData.endTime = dayjs(val[1]).format('YYYY-MM-DD HH:mm:ss');
+        formData.startTime = dayjs(val[0]).startOf('day').format('YYYY-MM-DD HH:mm:ss'); // 当天 00:00:00
+        formData.endTime = dayjs(val[1]).endOf('day').format('YYYY-MM-DD HH:mm:ss');     // 当天 23:59:59
     } else {
         formData.startTime = '';
         formData.endTime = '';
