@@ -82,6 +82,13 @@ const data = {
     { value: "2036", label: "多利" },
     { value: "2038", label: "电投百家乐" },
   ],
+  // 皇冠体育注单状态
+  hgSportStatus: [
+    { value: "Open", label: "投注已确认" },
+    { value: "Settled", label: "投注已结算" },
+    { value: "Canceled", label: "投注已取消" },
+    { value: "Void", label: "投注作废" },
+  ],
 };
 
 export const getDict = (name) => {

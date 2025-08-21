@@ -44,3 +44,21 @@ export function get9GOrderDataList(params) {
     params,
   });
 }
+
+// 获取皇冠游戏列表
+export function getHgOrderDataList(type, params) {
+  return request({
+    url: `/dp-wm/crownGame/${type}/betLogs`,
+    method: "GET",
+    params,
+  });
+}
+
+// 获取沙巴游戏列表
+export function getShabaOrderDataList(params) {
+  return request({
+    url: "/dp-wm/ibc/gameData",
+    method: "GET",
+    params,
+  });
+}

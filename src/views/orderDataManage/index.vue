@@ -7,6 +7,9 @@
             <el-tab-pane label="FG" :name="3" />
             <el-tab-pane label="9G" :name="4" />
             <el-tab-pane label="WM" :name="5" />
+            <el-tab-pane label="皇冠体育" :name="6" />
+            <el-tab-pane label="皇冠彩票" :name="7" />
+            <el-tab-pane label="沙巴" :name="8" />
         </el-tabs>
         <astarGame v-if="state.activeName === 0" />
         <dbPeopleGame v-else-if="state.activeName === 1" />
@@ -14,6 +17,9 @@
         <fgGame v-else-if="state.activeName === 3" />
         <g9Game v-else-if="state.activeName === 4" />
         <wmGame v-else-if="state.activeName === 5" />
+        <crownSports v-else-if="state.activeName === 6" />
+        <crownLottery v-else-if="state.activeName === 7" />
+        <sabahGame v-else-if="state.activeName === 8" />
     </el-card>
 </template>
 
@@ -25,6 +31,9 @@ import dbPeopleGame from './dbPeopleGame.vue';
 import dbSportsGame from './dbSportsGame.vue';
 import astarGame from './astarGame.vue';
 import wmGame from './wmGame.vue';
+import crownSports from './crownSports.vue';
+import crownLottery from './crownLottery.vue';
+import sabahGame from './sabahGame.vue';
 
 const state = reactive({
     activeName: 0
