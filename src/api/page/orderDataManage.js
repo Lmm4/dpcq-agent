@@ -62,3 +62,12 @@ export function getShabaOrderDataList(params) {
     params,
   });
 }
+
+// 获取DB体育游戏列表
+export function getDBSportOrderDataList(params) {
+  return request({
+    url: "/dp-wm/bd/tyHistory",
+    method: "GET",
+    params,
+  });
+}

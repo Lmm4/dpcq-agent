@@ -3,7 +3,7 @@
         <el-tabs v-model="state.activeName">
             <el-tab-pane label="亚星" :name="0" />
             <el-tab-pane label="DB真人" :name="1" />
-            <!-- <el-tab-pane label="DB体育" :name="2" /> -->
+            <el-tab-pane label="DB体育" :name="2" />
             <el-tab-pane label="FG" :name="3" />
             <el-tab-pane label="9G" :name="4" />
             <el-tab-pane label="WM" :name="5" />

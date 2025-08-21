@@ -89,6 +89,49 @@ const data = {
     { value: "Canceled", label: "投注已取消" },
     { value: "Void", label: "投注作废" },
   ],
+  // db体育结算结果
+  dbSportResult: [
+    { value: "0", label: "无结果" },
+    { value: "2", label: "走水" },
+    { value: "3", label: "输" },
+    { value: "4", label: "赢" },
+    { value: "5", label: "赢半" },
+    { value: "6", label: "输半" },
+    { value: "7", label: "赛事取消" },
+    { value: "8", label: "赛事延期" },
+    { value: "11", label: "比赛延迟" },
+    { value: "12", label: "比赛中断" },
+    { value: "13", label: "未知" },
+    { value: "15", label: "比赛放弃" },
+    { value: "16", label: "异常盘口" },
+    { value: "17", label: "未知赛事状态" },
+    { value: "18", label: "比赛取消" },
+    { value: "19", label: "比赛延期" },
+  ],
+  // db赛事类型
+  dbSportType: [
+    { value: "1", label: "常规赛事" },
+    { value: "2", label: "冠军赛事" },
+    { value: "3", label: "VR赛事" },
+    { value: "4", label: "电子赛事" },
+  ],
+  // db体育投注类型
+  dbSportBetType: [
+    { value: "1", label: "早盘赛事" },
+    { value: "2", label: "滚球盘赛事" },
+    { value: "3", label: "冠军盘赛事" },
+    { value: "4", label: "虚拟赛事" },
+    { value: "5", label: "电竞赛事" },
+  ],
+  // db体育盘口类型
+  dbSportOddsType: [
+    { value: "EU", label: "欧盘" },
+    { value: "HK", label: "香港盘" },
+    { value: "US", label: "美式盘" },
+    { value: "ID", label: "印尼盘" },
+    { value: "MY", label: "马来盘" },
+    { value: "GB", label: "英式盘" },
+  ],
 };
 
 export const getDict = (name) => {
