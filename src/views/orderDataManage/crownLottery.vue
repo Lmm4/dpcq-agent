@@ -17,16 +17,17 @@
         <el-table :data="state.tableData" border style="width: 100%">
             <el-table-column prop="userInfoDTO.userId" label="用户ID" align="center" width="140" />
             <el-table-column prop="userInfoDTO.username" label="用户账号" align="center" width="140" />
-            <el-table-column prop="crownBetLog.wagerNo" label="订单号" align="center" width="220" />
-            <el-table-column prop="crownBetLog.betAmount" label="下注金额" align="center" width="180" />
+            <el-table-column prop="crownBetLog.itemId" label="游戏单号" align="center" width="220" />
+            <el-table-column prop="crownBetLog.wagerNo" label="注单号" align="center" width="180" />
+            <el-table-column prop="crownBetLog.betAmount" label="下注金额" align="center" width="160" />
             <el-table-column label="注单状态" align="center" width="180">
                 <template #default="{ row }">
                     <div>{{ getDictLabel('hgSportStatus', row.crownBetLog.wagerStatus) }}</div>
                 </template>
             </el-table-column>
-            <el-table-column prop="crownBetLog.winLoss" label="输赢金额" align="center" width="180" />
+            <el-table-column prop="crownBetLog.winLoss" label="输赢金额" align="center" width="160" />
             <el-table-column prop="crownBetLog.itemOdds" label="投注项赔率" align="center" width="120" />
-            <el-table-column label="下注时间" align="center" width="auto">
+            <el-table-column label="下注时间" align="center" min-width="220">
                 <template #default="{ row }">
                     <div>{{ dayjs(row.crownBetLog.betTime).format('YYYY-MM-DD HH:mm:ss') }}</div>
                 </template>
