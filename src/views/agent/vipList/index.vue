@@ -35,6 +35,7 @@
                 <el-table-column prop="todayValidBet" label="今日有效流水" align="center" width="auto" />
                 <el-table-column prop="winLoss" label="输赢总额" align="center" width="auto" />
                 <el-table-column prop="validBet" label="总有效流水" align="center" width="auto" />
+                <el-table-column prop="totalValidBetAmount" label="总有效投注" align="center" width="180" />
                 <!-- <el-table-column prop="point" label="积分" align="center" width="auto" /> -->
                 <el-table-column prop="wallet" label="个人钱包余额" align="center" width="auto" />
                 <el-table-column prop="deposit" label="累计总充值" align="center" width="auto" />

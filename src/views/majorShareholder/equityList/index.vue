@@ -20,8 +20,8 @@
                 <el-table-column prop="memberCount" label="旗下所有会员数量" align="center" width="180" />
                 <el-table-column prop="finalWinLoss" label="输赢额" align="center" width="180" />
                 <el-table-column prop="totalRebateAmount" label="总返水金额" align="center" width="180" />
-                <el-table-column prop="totalRebateAmount" label="有效流水" align="center" width="180" />
-                <el-table-column prop="totalRebateAmount" label="有效投注" align="center" width="180" />
+                <!-- <el-table-column prop="totalRebateAmount" label="有效流水" align="center" width="180" /> -->
+                <el-table-column prop="totalValidBetAmount" label="总有效投注" align="center" width="180" />
                 <el-table-column prop="shareholderProfitPercent" label="股东分润比例" align="center" width="170">
                     <template #default="{ row }">
                         <div>{{ row.shareholderProfitPercent * 100 }}%</div>
